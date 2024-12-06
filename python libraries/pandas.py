@@ -46,3 +46,73 @@ a = [1,2,3,4]
 myvar = pd.Series (a,index= ['w','x','y','z'])
 print(myvar)
   
+  
+                 # loading data to a dataframe
+import pandas as pd
+df = pd.read_csv('data.csv')
+print(df)
+
+
+                      #CSV data frame
+#deals with large sets of data
+import pandas as pd
+df = pd.read_csv('data.csv')
+print(df)
+
+# we use the to_string() method to print the entire dataframe if not the first 5 rows and last 5 rows will be printed if the datarame is too large
+import pandas as pd
+df = pd.read_csv('data.csv')
+print(df.to_string())
+
+# checking the maximum rows by pd.options.dispaly.max_rows statement
+import pandas as pd
+print(pd.options.display.max_rows) 
+
+
+#increasing the number of rows to be displayed
+import pandas as pd
+pd.options.display.max_rows = 100
+df = pd.read_csv("data.csv")
+print(df)
+
+
+                          #ANALYZING DATA FRAMES
+#we use the head() method to view the first few rows of a dataframe and also we can specifiy the nmber of rows we want to view
+import pandas as pd
+df = pd.read_csv('data.csv')
+print(df.head(5))
+
+#we use the tail () method to view the last few rows of a dataframe and also we can specifiy the nm
+# of rows we want to view
+import pandas as pd
+df = pd.read_csv('data.csv')
+print(df.tail(5))
+
+# we can use the info () method to view the summary of the dataframe
+import pandas as pd
+df = pd.read_csv('data.csv')
+print(df.info())
+
+
+                            #CLEANING DATA
+#cleaning data is fixing bad data in the data cell
+#bad data could be empty,duplicate,wrong data ,data in wrong format
+#removing rows that contain empty cells we use the dropna() function
+import pandas as pd
+df = pd.read_csv('data.csv') #or
+df = pd.read_excel('cleaning.xlsx') # for excell data
+new_df = df.dropna() #removes rows with empty cells and wont change the original data frame
+print(new_df.to_string())
+
+# if you want to change the original data fram use inplace=true
+import pandas as pd
+df = pd.read_csv('data.csv') #or
+df = pd.read_excel('cleaning.xlsx') # for excell data
+df.dropna(inplace=True) #removes rows with empty cells and changes the original data frame
+
+
+#we use fillna() method add new items to empty cells so as we dont have to remove the entire row
+import pandas as pd
+df = pd.read_csv('data.csv') #or
+df = pd.read_excel('cleaning.xlsx')
+df.fillna(100,inplace=True)
