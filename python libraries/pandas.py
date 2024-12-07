@@ -101,7 +101,8 @@ print(df.info())
 import pandas as pd
 df = pd.read_csv('data.csv') #or
 df = pd.read_excel('cleaning.xlsx') # for excell data
-new_df = df.dropna() #removes rows with empty cells and wont change the original data frame
+new_df = df.dropna()
+#removes rows with empty cells and wont change the original data frame
 print(new_df.to_string())
 
 # if you want to change the original data fram use inplace=true
