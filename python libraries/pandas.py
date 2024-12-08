@@ -117,3 +117,12 @@ import pandas as pd
 df = pd.read_csv('data.csv') #or
 df = pd.read_excel('cleaning.xlsx')
 df.fillna(100,inplace=True)
+
+
+#Replace Only For Specified Columns
+#To only replace empty values for one column, specify the column name for the DataFrame:
+#Replace NULL values in the "Calories" columns with the number 130:
+import pandas as pd
+df = pd.read_csv('data.csv')
+
+df["Calories"].fillna(130, inplace = True)
