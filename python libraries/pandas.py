@@ -124,5 +124,27 @@ df.fillna(100,inplace=True)
 #Replace NULL values in the "Calories" columns with the number 130:
 import pandas as pd
 df = pd.read_csv('data.csv')
+df = pd.read_excel('cleaning.xlsx')
 
-df["Calories"].fillna(130, inplace = True)
+df["Country"].fillna(130, inplace = True)
+
+
+#Replace Using Mean, Median, or Mod
+#Pandas uses the mean() median() and mode() methods to calculate the respective values for a specified column:
+#Calculate the MEAN, and replace any empty values with it
+import pandas as pd
+df = pd.read_excel("cleaning.xlsx")
+x = df['Country'].mean()
+df['Country'].fillna(x, inplace=True)
+
+#Calculate the MEDIAN, and replace any empty values with it
+import pandas as pd
+df = pd.read_excel("cleaning.xlsx")
+x = df['Country'].median()
+df['Country'].fillna(x, inplace=True)
+
+#Calculate the MODE, and replace any empty values with it
+import pandas as pd
+df = pd.read_excel("cleaning.xlsx")
+x = df['Country'].mode()
+df['Country'].fillna(x, inplace=True)
