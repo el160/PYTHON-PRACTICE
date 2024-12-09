@@ -148,3 +148,39 @@ import pandas as pd
 df = pd.read_excel("cleaning.xlsx")
 x = df['Country'].mode()
 df['Country'].fillna(x, inplace=True)
+
+
+       #Cleaning Data of Wrong Format
+#Cleaning data of wrong format is a common task in data cleaning. Here are some ways to do
+#it:
+#Remove leading and trailing whitespaces from a column
+import pandas as pd
+df = pd.read_csv('data.csv')
+df['column_name'] = df['column_name'].str.strip()
+#Remove leading and trailing whitespaces from all columns
+import pandas as pd
+df = pd.read_csv('data.csv')
+df = df.apply(lambda x: x.str.strip())
+#Remove leading and trailing whitespaces from a column and convert it to lower case
+import pandas as pd
+df = pd.read_csv('data.csv')
+df['column_name'] = df['column_name'].str.strip().str.lower()
+##can remove the entire row thats not matching up using dropna() method
+import pandas as pd
+df = pd.read_csv('data.csv')
+df.dropna(subset=['column_name'], inplace=True)
+
+
+       #Removing Duplicates
+#we can use the duplicated() method.
+# The duplicated() method returns a Boolean values for each row:
+#To remove duplicates, use the drop_duplicates() method.
+
+
+                             # Data Correlations
+
+
+
+
+
+
