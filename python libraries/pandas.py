@@ -176,8 +176,44 @@ df.dropna(subset=['column_name'], inplace=True)
 # The duplicated() method returns a Boolean values for each row:
 #To remove duplicates, use the drop_duplicates() method.
 
-
+df.duplicated()
                              # Data Correlations
+# pandas use corr () method to show relationship between two columns
+# 1 to 1 means a perfect correlation ie if one value increases in one column another value increases in the other column
+# 0.9 means a good correlation ie if one value increases in one column another value increases in the other column
+# -0.9 sames 0.9 but if one value increases in one column another value decreases in the other column
+#0.2 means a bad correlation in that increase of values in one colum does neccessarily mean increase of value in other column
+# the corr() method avoids nun numeric values
+df.corr ()
+
+
+                      #pandas plotting
+# we use plot() method to show visual representation of the the values
+# we use pyplot a matpltlib module to show the visuals
+#we use the kind method to specify which type of graph we want 
+#we can also specifiy what should be on the x and y axis in the event of a graph that nedds both axis
+import pandas as pd
+import matplotlib.pyplot  as plt
+df = pd.read_csv('data.csv')
+df.plot()
+plt.show()
+
+    # scatter plot 
+kind = 'scatter' 
+x = 'duration'
+y = 'calories'
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('data.csv')
+df.plot(kind='scatter',x='duration',y='calories')
+plt.show()
+
+
+  # Histogram
+kind = 'hist'
+df['duration'].plot(kind='hist')
+
+
 
 
 
