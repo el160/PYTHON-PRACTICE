@@ -1,0 +1,163 @@
+# used for plotting purposes using the plot() method
+# we use pyplot a submodule of matplotlib for plotting puropes
+# we import it by import matplotlib.pyplot as plt 
+# we also use numpy for numerical computations
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array[1,3]
+y = np.array[0,6]
+plt.plot(x,y)
+plt.show()
+
+# the above expression draws a line between point [1,0] and [3,6]
+
+
+                       # PLOTING X AND Y POINTS
+# we use the plot() method
+  # 1.ploting a straight line
+# involves parameters on the x axis and the y axis
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array[2,3]
+y = np.array[10,6]  # here we pass arrays [2,10], [3,6] to the plot function
+plt.plot(x,y)
+plt.show()
+
+ #2.plotting without a line 
+# we use only makers and you can use shortcut string notation parameter 'o', which means 'rings'.
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array[2,3]
+y = np.array[10,6]  # here we pass arrays [2,10], [3,6] to the plot function
+plt.plot(x,y,'o')
+plt.show()
+
+    #3.Multiple points
+#You can plot as many points as you like, just make sure you have the same number of points in both axis.
+#eg draw a line diagrma (1,3) (5,8) (8,7)
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array[1,5,8]
+y = np.array[3,8,7]
+plt.plot(x,y)
+plt.show()
+
+  #4.default X-points
+#if there are no expoints they will take default values 0,1,2,3,4,5
+import matplotlib.pyplot as plt
+import numpy as np
+y = np.array[10,6,5,6,8,9]  
+plt.plot(x,y,)
+plt.show()
+
+    #4.MARKERS
+#You can use the keyword argument marker to emphasize each point with a specified marker:
+#Mark each point with a circle
+import  sys
+import matplotlib.pyplot as plt
+import numpy as np
+matplotlib.use('Agg')# backend to store figures without displaying
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker = 'o') 
+plt.show()
+#Two  lines to make our compiler able to draw:
+plt.savefig(sys.stdout.buffer)# where figure is stored
+sys.stdout.flush()# flush the buffer even before system completes running
+
+
+#marker references
+# Marker	Description
+# 'o'	Circle	
+# '*'	Star	
+# '.'	Point	
+# ','	Pixel	
+# 'x'	X	
+# 'X'	X (filled)	
+# '+'	Plus	
+# 'P'	Plus (filled)	
+# 's'	Square	
+# 'D'	Diamond	
+# 'd'	Diamond (thin)	
+# 'p'	Pentagon	
+# 'H'	Hexagon	
+# 'h'	Hexagon	
+# 'v'	Triangle Down	
+# '^'	Triangle Up	
+# '<'	Triangle Left	
+# '>'	Triangle Right	
+# '1'	Tri Down	
+# '2'	Tri Up	
+# '3'	Tri Left	
+# '4'	Tri Right	
+# '|'	Vline	
+# '_'	Hline
+
+
+   #5.Format string fmt
+#You can also use the shortcut string notation parameter to specify the marker.
+#This parameter is also called fmt, and is written with this syntax:
+#marker|line|color
+import matplotlib.pyplot as plt
+import numpy as np
+ypoints = np.array([3, 8, 1, 10])
+plt.plot(ypoints, marker='o', linestyle='-', color='r')
+plt.show()
+
+
+#Line Reference
+# Line Syntax	Description
+# '-'	         Solid line	
+# ':'	         Dotted line	
+# '--'	         Dashed line	 
+# '-.'	         Dashed/dotted line
+
+
+# color reference 
+# Color Syntax	Description
+# 'r'	         Red	
+# 'g'	         Green	
+# 'b'	         Blue	
+# 'c'	         Cyan	
+# 'm'	         Magenta	
+# 'y'	         Yellow	
+# 'k'	         Black	
+# 'w'	         White
+
+
+   #6 Marker Size 
+#You can also specify the size of the marker using the markersize keyword or short form ms.
+#The size is specified in points, where 1 point is 1/72 of an inch
+import matplotlib.pyplot as plt
+import numpy as np
+ypoints = np.array[2,4,5,3,6]
+plt.plot(ypoints,ms = 20 , linestyle = '-.',color ='k')
+
+
+    #7 Marker color
+#You can use the keyword argument markeredgecolor or the shorter mec to set the color of the edge of the markers:
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker = 'o', ms = 20, mec = 'r')
+plt.show()
+
+#You can use the keyword argument markerfacecolor or the shorter mfc to set the color inside the edge of the markers:
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker = 'o', ms = 20, mfc = 'w')
+plt.show()
+
+# using both mec and mfc
+import matplotlib.pyplot as plt
+import numpy as np
+ypoints = np.array([3, 8, 1, 10])
+plt.plot(ypoints, marker = 'o', ms = 20, mfc = 'w', mec = 'r')
+plt.show()
+
