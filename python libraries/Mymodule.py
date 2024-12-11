@@ -12,19 +12,19 @@ Mymodule.MyCar("G63")
 #Variables in modules
 #variables of all types eg dictionaries,lists,tuples etc
 lady = {
-    "name": "Lady Gaga",
+    "id": "Lady Gaga",
     "age": 35,
     "city": "New York",
     "cars": ["Mercedes", "BMW", "Audi"],
 }
 import Mymodule
 #accesing lady dictionary
-a = Mymodule.lady["name"]
+a = Mymodule.lady["nid"]
 print(a)
 
 #Renaming a module using "as" keyword
 import Mymodule as mm
-a = mm.lady["name"]
+a = mm.lady["id"]
 print(a)
 
 #builtin modules
