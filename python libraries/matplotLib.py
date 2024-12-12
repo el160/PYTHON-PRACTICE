@@ -162,7 +162,7 @@ plt.plot(ypoints, marker = 'o', ms = 20, mfc = 'w', mec = 'r')
 plt.show()
 
 
-                      #MATPLOTLIB LINE
+                      #5.MATPLOTLIB LINE
    # line widith 
 # we can use the keyword linewidith or lw to show the line widith
 # the answer is usually in a floating form
@@ -189,7 +189,7 @@ xlabel = np.array[5,8,7,4,9]
 plt.plot(xlabel,ylabel)
 
 
-             #MATPLOTLIB Labels And Title
+             #6.MATPLOTLIB Labels And Title
 # we use the keyword label() for x and y axis
 # for instance xlabel and ylabel
 import matplotlib.pyplot as plt
@@ -205,3 +205,101 @@ plt.show()
  # the title is usually in a string format
  #we can also add the location of title usong the loc keyword 
  #the title location is usually set to left right or centre
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array[40,60,90,75,85,88,55]
+y = np.array[110,99,120,160,145,150,180]
+plt.plot(x,y)
+plt.title('Heart Rates',loc='center')
+xlabel('diastol')
+ylabel('systol')
+plt.show()
+
+ #we can also add the font size of the title,xlabel,ylabel using the fontsize keyword
+ #we can use the fontdict parameter to add the font size of the title,xlabel and ylabel
+import matplotlib.pyplot as plt
+import numpy as np
+font1 = {'family':'Times New Roman','color':'blue','size':20}
+font2 = {'family':'serif','color':'darkred','size':15}
+x = np.array[40,60,90,75,85,88,55]
+y = np.array[110,99,120,160,145,150,180]
+plt.plot(x,y)
+plt.title('Heart Rates',loc='center',fontdict=font1)
+xlabel('distol',fontdict=font2)
+ylabel('systol',fontdict=font2)
+plt.show()
+
+             #7.MATPLOLIB GRID
+# with pyplot we the keyword grid()
+# we can specifiy which axis to have the grid that is xaxis or yaxis
+#we can also sttle the grid that is font size color etc
+import matplotlib.pyplot as plt
+import numpy as np
+font1 = {'family':'Times New Roman','color':'blue','size':20}
+font2 = {'family':'serif','color':'darkred','size':15}
+x = np.array[40,60,90,75,85,88,55]
+y = np.array[110,99,120,160,145,150,180]
+plt.plot(x,y)
+plt.title('Heart Rates',loc='center',fontdict=font1)
+xlabel('distol',fontdict=font2)
+ylabel('systol',fontdict=font2)
+plt.grid(axis=y,color='green' ,linestyle='-.' ,linewidth=10.5)
+plt.show()
+
+          #8.MATPLOTLIB SUBPLOT
+#we use the subplot() function to draw multiple plots on one figure
+import matplotlib.pyplot as plt
+import numpy as np
+#plot 1
+x = np.array[40,60,90,75,85,88,55]
+y = np.array[110,99,120,160,145,150,180]
+plt.subplot()
+plt.plot(x,y)
+#plt 2
+v = np.array[1,4,3,2,5,5]
+f = np.array[3,4,5,6,7,]
+plt.subplot()
+plt.plot(v,f)
+plt.show()
+
+# we use the subplot function in three layout configurations whereby the first one rep rows,2nd one rep columns and 3rd rep the postn ot index
+import matplotlib.pyplot as plt
+import numpy as np
+#plot 1
+x = np.array[40,60,90,75,85,88,55]
+y = np.array[110,99,120,160,145,150,180]
+plt.subplot(1,2,1)
+plt.plot(x,y)
+#plt 2
+v = np.array[1,4,3,2,5,5]
+f = np.array[3,4,5,6,7,]
+plt.subplot(1,3,2)
+plt.plot(v,f)
+plt.show()
+
+
+# you can also add a title and a suptitle to the subplot figure
+# a suptitle is the the general title of the figure
+# the title is the specific title fot each figure
+import matplotlib.pyplot as plt
+import numpy as np
+
+#plot 1:
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(1, 2, 1)
+plt.plot(x,y)
+plt.title("SALES")
+
+#plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(1, 2, 2)
+plt.plot(x,y)
+plt.title("INCOME")
+
+plt.suptitle("MY SHOP")
+plt.show()
+ 
