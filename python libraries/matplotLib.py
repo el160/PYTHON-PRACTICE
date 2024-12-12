@@ -95,7 +95,7 @@ sys.stdout.flush()# flush the buffer even before system completes running
 # '_'	Hline
 
 
-   #5.Format string fmt
+   #.Format string fmt
 #You can also use the shortcut string notation parameter to specify the marker.
 #This parameter is also called fmt, and is written with this syntax:
 #marker|line|color
@@ -126,7 +126,7 @@ plt.show()
 # 'w'	         White
 
 
-   #6 Marker Size 
+   # Marker Size 
 #You can also specify the size of the marker using the markersize keyword or short form ms.
 #The size is specified in points, where 1 point is 1/72 of an inch
 import matplotlib.pyplot as plt
@@ -135,7 +135,7 @@ ypoints = np.array[2,4,5,3,6]
 plt.plot(ypoints,ms = 20 , linestyle = '-.',color ='k')
 
 
-    #7 Marker color
+    # Marker color
 #You can use the keyword argument markeredgecolor or the shorter mec to set the color of the edge of the markers:
 import matplotlib.pyplot as plt
 import numpy as np
@@ -161,3 +161,47 @@ ypoints = np.array([3, 8, 1, 10])
 plt.plot(ypoints, marker = 'o', ms = 20, mfc = 'w', mec = 'r')
 plt.show()
 
+
+                      #MATPLOTLIB LINE
+   # line widith 
+# we can use the keyword linewidith or lw to show the line widith
+# the answer is usually in a floating form
+import matplotlib.pyplot as plt
+import numpy as np
+ylabel = np.array[1,5,7,3,8]
+plt.plot(ylabel,lw = 10.5, ls = '--',mec = 'magenta' ,mfc = 'k')
+plt.show()
+
+  #multiple lines
+# you can draw multiple line by adding plt.plot() functions
+import matplotlib.pyplot as plt
+import numpy as np
+ylabel = np.array[1,5,7,3,8]
+xlabel = np.array[5,8,7,4,9]
+plt.plot(ylabel)
+plt.plot(xlabel)
+# you can as well use the plt.plot() function to draw many lines at once
+import matplotlib.pyplot as plt
+import numpy as np
+ylabel = np.array[1,5,7,3,8]
+xlabel = np.array[5,8,7,4,9]
+
+plt.plot(xlabel,ylabel)
+
+
+             #MATPLOTLIB Labels And Title
+# we use the keyword label() for x and y axis
+# for instance xlabel and ylabel
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array[40,60,90,75,85,88,55]
+y = np.array[110,99,120,160,145,150,180]
+plt.plot(x,y)
+xlabel('diastol')
+ylabel('systol')
+plt.show()
+
+ # we can add the title to the graph using the title key word
+ # the title is usually in a string format
+ #we can also add the location of title usong the loc keyword 
+ #the title location is usually set to left right or centre
