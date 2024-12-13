@@ -303,3 +303,101 @@ plt.title("INCOME")
 plt.suptitle("MY SHOP")
 plt.show()
  
+ 
+ 
+               #MATPLOT SCATTER
+# we use the scatter() function to draw the scatter plots
+# the value on the x axis must correrelate to the other value in the y axis
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array [5,7,8,7,2,17,2,9,4,11,12,9,6]
+y = np.array [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+plt.scatter(x,y)
+plt.show
+
+  #colors
+# you can set the color of the scatter plot using the c argument
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array ([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array ([99,86,87,88,111,86,103,87,94,78,77,85,86])
+
+plt.scatter(x,y ,c='r')
+
+x = np.array([2,2,8,1,15,8,12,9,7,3,11,4,7,14,12])
+y = np.array([100,105,84,105,90,99,90,95,94,100,79,112,91,80,85])
+plt.scatter(x, y, c = 'k')
+
+plt.show
+   #color each dot
+# you set the color of each dot using the arrray of colors
+#here the keyword color does not work rather the c argument is used
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+colors = np.array(["red","green","blue","yellow","pink","black","orange","purple","beige","brown","gray","cyan","magenta"])
+
+plt.scatter(x, y, c=colors)
+
+plt.show()
+
+   #color map
+# you can use the cmap argument to set the color map of the scatter plot 
+# color map contain list of colors ranging from 0 to 100
+# 'viridis' is the built colormap keyfunction in matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+colors = np.array([0, 10, 20, 30, 40, 45, 50, 55, 60, 70, 80, 90, 100])
+
+plt.scatter(x, y, c=colors, cmap='viridis')
+
+plt.show()
+
+ # we can include the color bar in the plot using the plt.colorbar() function
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+colors = np.array([0, 10, 20, 30, 40, 45, 50, 55, 60, 70, 80, 90, 100])
+
+plt.scatter(x, y, c=colors, cmap='viridis')
+
+plt.colorbar()
+
+plt.show()
+ 
+
+       # size of the dots
+  #you can change the size of the dots with the s argument.
+#Just like colors, make sure the array for sizes has the same length as the arrays for the x- and y-axis:
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+sizes = np.array([20,50,100,200,500,1000,60,90,10,300,600,800,75])
+
+plt.scatter(x, y, s=sizes)
+
+plt.show()
+
+
+   # alpha
+   # you can change the transparency of the dots with the alpha argument.
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+sizes = np.array([20,50,100,200,500,1000,60,90,10,300,600,800,75])
+
+plt.scatter(x, y, s=sizes , alpha=0.9)
+
+plt.show()
