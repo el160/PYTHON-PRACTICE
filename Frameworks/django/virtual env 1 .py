@@ -9,10 +9,10 @@
 #After it, change directory to the newly created directory by using the cd myworld.  
 
 #3. create a virtual env
-' py -m venv myworld  '
+' py -m venv myapp  '
 
 #4. activate the virtual environment
-'myworld\Scripts\activate.bat'
+'myapp\Scripts\activate'
 
 #5.install django in the virtual environment
 'pip install django'
