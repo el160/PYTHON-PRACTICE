@@ -22,25 +22,25 @@
 
 
 #open the views.py folder in the project my_club and replace players(app) with:
-from django.http import HttpResponse
-from django.template import loader
+# from django.http import HttpResponse
+# from django.template import loader
 
-def players(request):
-  template = loader.get_template('first.html')
-  return HttpResponse(template.render())
+# def players(request):
+#   template = loader.get_template('first.html')
+#   return HttpResponse(template.render())
 
 
 # go to settings.py file of the project folders
 #go to installed apps sections  and add the app (players)
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'players'
-]
+# INSTALLED_APPS = [
+#     'django.contrib.admin',
+#     'django.contrib.auth',
+#     'django.contrib.contenttypes',
+#     'django.contrib.sessions',
+#     'django.contrib.messages',
+#     'django.contrib.staticfiles',
+#     'players'
+# ]
 
 # then run the command "python manage.py migrate" which will show all migrations
 # Operations to perform:
