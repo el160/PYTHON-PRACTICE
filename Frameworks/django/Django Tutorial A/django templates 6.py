@@ -10,6 +10,7 @@
 #             first.html
 
 # open the html file and insert code to display the app info
+# % static loader%
 # <!DOCTYPE html>
 # <html>
 # <body>

@@ -7,7 +7,7 @@
 # from . import views
 
 # urlpatterns = [
-#     path('players/', views.players, name='players'),
+#     path('', views.players, name='players'),
 # ]
 
 # # go to the urls.py file in the project folder and ensure it has the following code:
