@@ -1,0 +1,1 @@
+# select member you want to delete and follow steps
