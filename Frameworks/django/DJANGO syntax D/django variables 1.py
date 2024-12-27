@@ -29,17 +29,17 @@
 
 #            Data from a model
 #the Player model created in the previous chapters , to get data from it we have to import it in the views.py
-from django.http import HttpResponse, HttpResponseRedirect
-from django.template import loader
-from .models import Player
+# from django.http import HttpResponse, HttpResponseRedirect
+# from django.template import loader
+# from .models import Player
 
-def testing(request):
-  myplayers = Player.objects.all().values()
-  template = loader.get_template('template.html')
-  context = {
-    'myplayers':myplayers,
-  }
-  return HttpResponse(template.render(context, request))
+# def testing(request):
+#   myplayers = Player.objects.all().values()
+#   template = loader.get_template('template.html')
+#   context = {
+#     'myplayers':myplayers,
+#   }
+#   return HttpResponse(template.render(context, request))
 
 # now the data above can be used in a template
 
