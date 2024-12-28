@@ -19,15 +19,15 @@
 #         views.py
 
 
-from django.shortcuts import render
+# from django.shortcuts import render
 
 # Create your views here.
 #Find it and open it, and replace the content with this:
 
-#my_tennis_club/members/views.py:
+#my_club/players/views.py:
 
-from django.shortcuts import render
-from django.http import HttpResponse
+# from django.shortcuts import render
+# from django.http import HttpResponse
 
-def members(request):
-    return HttpResponse("Hey players!")
+# def players(request):
+#     return HttpResponse("Hey players!")
