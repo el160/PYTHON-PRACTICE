@@ -1,4 +1,4 @@
-# static files in the project are handled directly when django is set to false 
+# static files in the project arent handled directly when django is set to false 
 # when debug is set to true, the static files are handled by the django server
 # when debug is set to false, the static files are handled by the whiteNoise middleware
 
