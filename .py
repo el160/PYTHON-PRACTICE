@@ -21,3 +21,13 @@ numbers.copy()        # Returns a copy of the list
 
 # Checking the index of an item
 print(numbers.index(3)) # Returns the index of the first occurrence of 3
+
+
+
+# last four digits of credit card
+credit_card = 1234-5678-1234-5678
+last_four_digits = credit_card[-4:]
+print(f"xxxx-xxxx-xxxx-{last_four_digits}")
+# reversing the creditcard number
+reversed_credit_card = credit_card[::-1]
+print(reversed_credit_card)
